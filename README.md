@@ -81,7 +81,7 @@ npm run dev
 
 ## Endpoints
 
-Go go wiki [github.com/osmarmolina/tasks/wiki](https://) to see the details of each endpoints
+Go go wiki [https://github.com/osmarmolina/tasks/wiki](https://) to see the details of each endpoints
 
 ## Login/SignIn
 

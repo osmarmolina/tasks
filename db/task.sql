@@ -1,4 +1,5 @@
 CREATE DATABASE task;
+USE task;
 
 CREATE TABLE user (
     id INT NOT NULL AUTO_INCREMENT,
@@ -21,9 +22,10 @@ CREATE TABLE task (
     status BOOLEAN NOT NULL DEFAULT 0,
     is_public BOOLEAN NOT NULL DEFAULT 0,
     tags JSON,
+    user_id INT NOT NULL,
+    user_in_charge INT,
     file MEDIUMBLOB,
     created_by INT NOT NULL,
-    user_in_charge INT,
     FOREIGN KEY (user_id) REFERENCES user(id),
     FOREIGN KEY (user_in_charge) REFERENCES user(id),
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
