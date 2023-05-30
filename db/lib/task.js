@@ -37,6 +37,7 @@ class Task {
   }
   //Este metodo recibe el title el cual no debe ser vacio y el parametro description que es opcional
   createTask(data) {
+    console.log(data)
     const query = `INSERT INTO task(title, task_id, description, is_public, tags, file, created_by, user_in_charge) 
                     VALUES(?, ?, ?, ?, ?, ?, ?, ?)`;
     const result = connection.query(query, [
@@ -49,6 +50,7 @@ class Task {
       data.created_by,
       data.user_in_charge ?? null,
     ]);
+    console.log(query);
 
     return result;
   }
