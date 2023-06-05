@@ -22,11 +22,10 @@ CREATE TABLE task (
     status BOOLEAN NOT NULL DEFAULT 0,
     is_public BOOLEAN NOT NULL DEFAULT 0,
     tags JSON,
-    user_id INT NOT NULL,
-    user_in_charge INT,
     file MEDIUMBLOB,
+    user_in_charge INT,
     created_by INT NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES user(id),
+    FOREIGN KEY (created_by) REFERENCES user(id),
     FOREIGN KEY (user_in_charge) REFERENCES user(id),
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
